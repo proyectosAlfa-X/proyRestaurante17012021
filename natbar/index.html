@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scala=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/estilos2.css">
+    <link rel="stylesheet" type="text/css" href="../css/csst.css">
+	<link rel="stylesheet" type="text/css" href="loader.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script serc="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script serc="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="spin.umd.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script type ="text/javascript" src="../css/bootstrap-filestyle.min.js"></script>
+    <script type ="text/javascript" src="../controlador/producto.js"></script>
+    <script type="text/javascript" src="../js/habilitaDesabInput.js"></script>
+     <script type="text/javascript" src="../toastr-master/jquery.js"></script>
+<script type="text/javascript" src="../toastr-master/toastr.js"></script>
+<script type="text/javascript" src="https://spin.js.org/spin.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../toastr-master/toastr.scss"/>
+<!--<link href="http://codeseven.github.com/toastr/toastr-responsive.css" rel="stylesheet"/>-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<script serc="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="spin.umd.js"></script>
+	<link rel="stylesheet" type="text/css" href="loader.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+</head>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">RICODELI</label>
+    <ul>
+        <li><a  class="active" href="#">INICIO</a></li>
+        <li><a href="#">FACTURACION</a></li>
+        <li><a href="#">COMPRAS</a></li>
+        <li><a href="#">MANUAL</a></li>
+        <li><a href="#">REPORTES</a></li>
+    </ul>
+    
+</nav>	
+<body>
+
+<div class="panel panel-default">
+	<script type="text/javascript">
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+});
+
+</script>
+
+
+<div class="loader"></div>
+
+  <div class="panel-heading" style="background-color:#FDFEFE;">
+    <h2 class="panel-title" style=" text-align: center; width: 100%; height: 20px; font-size: 20px; margin-bottom: 0px;">INGRESO DE PRODUCTO</h2>
+        <div class="row vertical-align voy" style="margin-bottom: 0px;">
+    <div class="col-xs-10 margenes">
+  <div class="panel-body" style="margin-top: 0px;">
+    
+
+        <!--aqui formulario bootstrap-->
+        
+
+       <form class="form-horizontal company" role="form" id="comp">
+                    <div class="form-group"style="margin-top:0px; margin-bottom: 0px">
+                    <div class="row">
+                        <div class="col-sm-4">
+                        <label for="name" class=" control-label bordesredondos" style="height: 5px; color: purple">Nombre Producto</label>
+                            <input type="text" class="form-control colorInput2 estilord" id="" name="" placeholder="*PRODUCTO" required="required" >
+                        </div>
+                        <div class="col-sm-4">   
+                        <label for="zipcode"  class=" control-label" style="color: purple">Tipo de Producto</label>
+                            <input type="text" class="form-control colorInput2 estilord" id="" name="" placeholder="*TIPO DE PRODUCTO">
+                        </div>
+                        <div class="col-sm-4" >
+                        <label for="city" class=" control-label" style="color: purple;">Unidad de medida</label>
+                            <input type="text" class="form-control estilord"id="" name="" placeholder="*UNIDAD DE MEDIDA">
+                        </div>
+                    </div>
+                </div>
+                    <div class="form-group" style="margin-top:0px; margin-bottom: 0px";>
+                         <div class="row">
+                        
+                        <div class="col-sm-4">
+                        <label for="fingreso" class=" control-label" style="color: purple">fecha de Ingreso producto</label>
+                            <input type="text" class="form-control colorInput estilord" id="" name="" placeholder="*FECHA DE INGRESO">
+                        </div>
+                        <div class="col-sm-4">
+                    <label for="fvencimiento" class=" control-label"style="color: purple">Fecha de Vencimiento</label>
+                    <input type="text" class="form-control colorInput estilord" id="" name="" placeholder="*FECHA DE VENCIMIENTO">
+                    </div>
+                    <div class="col-sm-4">
+                    <label for="estado" class=" control-label"style="color: purple">Estado</label>
+                    <input type="text" class="form-control colorInput estilord" id="" name="" placeholder="*ESTADO">
+                        </div>
+                         </div>
+                    </div>
+                    <div class="form-group"style="margin-top: 0px; margin-bottom: 0px;">
+                         <div class="row">
+                        <div class="col-sm-4">
+                        <label for="sucursal" class=" control-label"style="color: purple">Sucursal</label>
+                            <input type="text" class="form-control estilord" id="city" name="" placeholder="*SUCURSAL">
+                        </div>
+                        <div class="col-sm-4">
+                        <label for="costo" class=" control-label"style="color: purple">Costo Producto</label>
+                            <input type="text" class="form-control estilord" id="country" name="" placeholder="*COSTO PRODCUTO">
+                        </div>
+                        <div class="col-sm-4">
+                        <label for="stock" class="control-label"style="color: purple">Stock/Existencia</label>
+                        <input type="text" class="form-control colorInput estilord" id="" name="" placeholder="*EXISTENCIA">
+                        </div>
+                         </div>
+                    </div>
+                    <div class="form-group"style="margin-top:0px;margin-bottom: 0px">
+                         <div class="row">
+                        
+                        <div class="col-sm-12">
+					<LABEL class="control-label formatoTextoL">IMAGEN </LABEL>
+					<input type="file" enctype="multipart/form-data"  id="imagen" placeholder="*IMAGEN"required="required" class="filestyle"  data-buttonName=" btn-primary" style="background-color: #e2f0fb; height: 1px; width: 10px;">
+				</div> 
+
+                      </div>
+                </div> 
+        </div>
+    </div>
+            
+            <div class="col-xs-6" style="margin-left: 80px;">
+                <div class="form-group" style="margin-top: 0px;">
+                    <div class="col-sm-6" style="margin-top: -5PX;">
+                    <label for="imagen"  class="col-sm-6 control-label" style="text-align: center;">Imagen</label>
+                
+                <table border="1" style="width: 100%;">
+                <tbody>
+                <tr>
+                <td style="height: 200px" colspan="2"></td>
+                </tr>
+                </tbody>
+                </table>    
+            </div>
+            <div class="col-sm-6" style="margin-top: 5px;">
+           <button type="button" class="btn btn-primary btn-lg btn-block desbloquea" disabled="disabled" onclick="guardar()">GUARDAR <i class="fa fa-save"></i></button>
+           
+          <button type="button" class="btn btn-success btn-lg btn-block " disabled="disabled">MODIFICAR <i class="fa fa-pencil-square-o"></i></button>
+            <button type="button" class="btn btn-warning btn-lg btn-block " disabled="disabled">BUSCAR <i class="fa fa-search"></i></button>
+            <button type="button" class="btn btn-info btn-lg btn-block" onclick="habilita();">NUEVO <i class="fa fa-pencil-square-o"></i></button>
+           <button type="button" class="btn btn-danger btn-lg btn-block" disabled="disabled">ELIMINAR <i class="fa fa-trash"></i></button>
+           
+        </div>
+        </div>
+        </div>
+        </form>
+</div>
+       
+    
+    
+    <div class="row vertical-align" style="margin-top: -20px ; margin-left: -20px; margin-right: 5px;">
+        <div class="col-xs-12 margenes ">
+        
+        <table id="tableUserList" style="background: white; border-radius: -20px;" class="table table-bordered table-hover table-responsive margenes table-striped">
+    <h2 style="text-align: center; margin-top:none; font-size: 20px" >Datos del Producto</h2>
+    <thead style=" background:#A9ABE4; font-size: 15px; ">
+        <tr>
+            <th  style="color: white; font-size: 15px; text-align: center" data-label="id">Id</th>
+            <th  style="color: white; font-size: 15px;text-align: center"data-label="Nombre Usuario">Nombre usuario</th>
+            <th  style="color: white;font-size: 15px;text-align: center" colspan="2" data-label="Acciones">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+ 
+        <tr>
+            <td >123</td>
+            <td >456</td>
+            <td>
+               	<button class="btn btn-info btn-xs tboton" data-toggle="modal" data-target="#myModal" onclick=""> <span class="glyphicon glyphicon-edit">Modificar </span></button>
+            </th>
+             <th>
+                         	<button class="btn btn-danger btn-xs tboton"  data-toggle="modal" data-target="#myModalEliminar" onclick="" ><span class="glyphicon glyphicon-remove">Eliminar</span></button>
+            </th>
+        </tr>
+        <tr>
+            <td data-label="id">789</td>
+            <td data-label="Estado">102</td>
+           <td data-label="Opciones">
+                 	<button class="btn btn-info btn-xs tboton" data-toggle="modal" data-target="#myModal" onclick=""> <span class="glyphicon glyphicon-edit">Modificar </span></button>
+            </td>
+             <td data-label="Opciones">
+                         	<button class="btn btn-danger btn-xs tboton"  data-toggle="modal" data-target="#myModalEliminar" onclick="" ><span class="glyphicon glyphicon-remove">Eliminar</span></button>
+            </td>
+        </tr>
+        <tr>
+            <td data-label="id">333</td>
+            <td data-label="Estado">222</td>
+           <td data-label="Opciones">
+                	<button class="btn btn-info btn-xs tboton" data-toggle="modal" data-target="#myModal" onclick=""> <span class="glyphicon glyphicon-edit">Modificar </span></button>
+            </td>
+             <td data-label="Opciones">
+                         	<button class="btn btn-danger btn-xs tboton"  data-toggle="modal" data-target="#myModalEliminar" onclick="" ><span class="glyphicon glyphicon-remove">Eliminar</span></button>
+            </td>
+        </tr>
+        <tr style="height: 2px;">
+            <td data-label="id" style="font-size: 10px;">333</td>
+            <td data-label="Estado" style="font-size: 10px;">222</td>
+              <td data-label="Opciones">
+                 	<button class="btn btn-info btn-xs tboton" data-toggle="modal" data-target="#myModal" onclick=""> <span class="glyphicon glyphicon-edit">Modificar</span></button>
+            </td>
+             <td data-label="Opciones">
+                         	<button class="btn btn-danger btn-xs tboton"  data-toggle="modal" data-target="#myModalEliminar" onclick="" ><span class="glyphicon glyphicon-remove">Eliminar</span></button>
+            </td>
+            
+        </tr>
+
+ <!-- Button trigger modal -->
+
+
+      
+    </tbody>
+</table>
+
+<br>
+<br>
+</div>
+</div>
+</div>
+</body>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog mdialTamanio">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background: #AF7AC5;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+
+   <div class="container">
+   <div class="row vertical-align voy">
+    <div class="col-xs-10 margenes">
+  <div class="panel-body">
+    
+
+        <!--aqui formulario bootstrap-->
+        
+
+       <form class="form-horizontal company" role="form" id="comp">
+                    <div class="form-group"  style="margin-top: 0px; margin-bottom: 0px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                        <label for="name" class=" control-label bordesredondos" style="height: 5px; color: purple">Nombre</label>
+                            <input type="text" class="form-control colorInput2 estilord" id="name" name="name" placeholder="Company" >
+                        </div>
+                        <div class="col-sm-4">   
+                        <label for="zipcode"  class=" control-label" style="color: purple">unidad de medida</label>
+                            <input type="text" class="form-control colorInput2 estilord" id="zipcode" name="zipcode" placeholder="ZIP Code">
+                        </div>
+                        <div class="col-sm-4" >
+                        <label for="city" class=" control-label" style="color: purple">fecha de ingreso</label>
+                            <input type="text" class="form-control estilord"id="city" name="city" placeholder="City">
+                        </div>
+                    </div>
+                </div>
+                    <div class="form-group" style="margin-top: 0px; margin-bottom: 0px;">
+                         <div class="row">
+                        
+                        <div class="col-sm-4">
+                        <label for="country" class=" control-label" style="color: purple">fecha de vencimiento</label>
+                            <input type="text" class="form-control colorInput estilord" id="country" name="country" placeholder="Country">
+                        </div>
+                        <div class="col-sm-4">
+                    <label for="city" class=" control-label"style="color: purple">05</label>
+                    <input type="text" class="form-control colorInput estilord" id="city" name="city" placeholder="City">
+                    </div>
+                    <div class="col-sm-4">
+                    <label for="country" class=" control-label"style="color: purple">06</label>
+                    <input type="text" class="form-control colorInput estilord" id="country" name="country" placeholder="Country">
+                        </div>
+                         </div>
+                    </div>
+                    <div class="form-group"style="margin-top: 0px; margin-bottom: 0px;">
+                         <div class="row">
+                        <div class="col-sm-4">
+                        <label for="city" class=" control-label"style="color: purple">07</label>
+                            <input type="text" class="form-control estilord" id="city" name="city" placeholder="City">
+                        </div>
+                        <div class="col-sm-4">
+                        <label for="country" class=" control-label"style="color: purple">08</label>
+                            <input type="text" class="form-control estilord" id="country" name="country" placeholder="Country">
+                        </div>
+                        <div class="col-sm-4">
+                        <label for="city" class="control-label"style="color: purple">09</label>
+                        <input type="text" class="form-control colorInput estilord" id="city" name="city" placeholder="City">
+                        </div>
+                         </div>
+                    </div>
+                    <div class="form-group"style="margin-top: 0px; margin-bottom: 0px;">
+                         <div class="row">
+                        <div class="col-sm-6">
+                        <label for="country" class="control-label"style="color: purple">10</label>
+                        <input type="text" class="form-control colorInput estilord" id="country" name="country" placeholder="Country">
+                	</div>
+                	<div class="col-sm-6">
+                        <label for="city" class="control-label"style="color: purple">DESCRIPCION</label>
+                        <input type="text" class="form-control colorInput estilord" id="city" name="city" placeholder="City">
+                        </div>
+
+                      </div>
+                </div>
+
+
+
+                </form> 
+        </div>
+    </div>
+            
+            <div class="col-xs-6 margenes">
+                <div class="form-group" >
+                    <div class="col-sm-6" >
+                    <label for="imagen"  class="col-sm-6 control-label" style="text-align: center;">Imagen</label>
+                
+                <table border="1" style="width: 100%; margin-left: -50px">
+                <tbody>
+                <tr>
+                <td style="height: 200px" colspan="2"></td>
+                </tr>
+                </tbody>
+                </table>    
+            </div>
+        </div>
+
+		</div>
+		</div> 
+        </div>
+
+    
+      </div>
+      <div class="modal-footer" style="background: #F8781D;">
+
+      	<button type="button" class="btn btn-primary btn-sm">GUARDAR <i class="fa fa-save"></i></button>
+          <button type="button" class="btn btn-success btn-sm">MODIFICAR <i class="fa fa-pencil-square-o"></i></button>
+            <button type="button" class="btn btn-warning btn-sm">BUSCAR <i class="fa fa-search"></i></button>
+           <button type="button" class="btn btn-danger btn-sm">ELIMINAR <i class="fa fa-trash"></i></button>
+        <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    
+
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- Modal Eliminar-->
+
+<!-- Modal -->
+<div id="myModalEliminar" class="modal fade" role="dialog">
+  <div class="modal-dialog mdialTamanio">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background: #AF7AC5;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+
+   <div class="container">
+   <div class="row vertical-align voy">
+    <div class="col-xs-10 margenes">
+  <div class="panel-body">
+    
+
+        <!--aqui formulario bootstrap-->
+
+        <form class="form-horizontal company" role="form" id="comp">
+                    <div class="form-group"  style="margin-top: 0px; margin-bottom: 0px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                        <label for="name" class=" control-label bordesredondos" style="height: 5px; color: purple">Nombre</label>
+                            <input type="text" class="form-control colorInput2 estilord" id="name" name="name" placeholder="Company" >
+                        </div>
+                        <div class="col-sm-4">   
+                        <label for="zipcode"  class=" control-label" style="color: purple">unidad de medida</label>
+                            <input type="text" class="form-control colorInput2 estilord" id="zipcode" name="zipcode" placeholder="ZIP Code">
+                        </div>
+                        <div class="col-sm-4" >
+                        <label for="city" class=" control-label" style="color: purple">fecha de ingreso</label>
+                            <input type="text" class="form-control estilord"id="city" name="city" placeholder="City">
+                        </div>
+                    </div>
+                </div>
+                    <div class="form-group" style="margin-top: 0px; margin-bottom: 0px;">
+                         <div class="row">
+                        
+                        <div class="col-sm-4">
+                        <label for="country" class=" control-label" style="color: purple">fecha de vencimiento</label>
+                            <input type="text" class="form-control colorInput estilord" id="country" name="country" placeholder="Country">
+                        </div>
+                        <div class="col-sm-4">
+                    <label for="city" class=" control-label"style="color: purple">05</label>
+                    <input type="text" class="form-control colorInput estilord" id="city" name="city" placeholder="City">
+                    </div>
+                    <div class="col-sm-4">
+                    <label for="country" class=" control-label"style="color: purple">06</label>
+                    <input type="text" class="form-control colorInput estilord" id="country" name="country" placeholder="Country">
+                        </div>
+                         </div>
+                    </div>
+                    <div class="form-group"style="margin-top: 0px; margin-bottom: 0px;">
+                         <div class="row">
+                        <div class="col-sm-4">
+                        <label for="city" class=" control-label"style="color: purple">07</label>
+                            <input type="text" class="form-control estilord" id="city" name="city" placeholder="City">
+                        </div>
+                        <div class="col-sm-4">
+                        <label for="country" class=" control-label"style="color: purple">08</label>
+                            <input type="text" class="form-control estilord" id="country" name="country" placeholder="Country">
+                        </div>
+                        <div class="col-sm-4">
+                        <label for="city" class="control-label"style="color: purple">09</label>
+                        <input type="text" class="form-control colorInput estilord" id="city" name="city" placeholder="City">
+                        </div>
+                         </div>
+                    </div>
+                    <div class="form-group"style="margin-top: 0px; margin-bottom: 0px;">
+                         <div class="row">
+                        <div class="col-sm-6">
+                        <label for="country" class="control-label"style="color: purple">10</label>
+                        <input type="text" class="form-control colorInput estilord" id="country" name="country" placeholder="Country">
+                	</div>
+                	<div class="col-sm-6">
+                        <label for="city" class="control-label"style="color: purple">DESCRIPCION</label>
+                        <input type="text" class="form-control colorInput estilord" id="city" name="city" placeholder="City">
+                        </div>
+
+                      </div>
+                </div>
+
+
+
+                </form> 
+        </div>
+    </div>
+        
+
+       
+            
+            <div class="col-xs-6 margenes">
+                <div class="form-group" >
+                    <div class="col-sm-6" >
+                    <label for="imagen"  class="col-sm-6 control-label" style="text-align: center;">Imagen</label>
+                
+                <table border="1" style="width: 100%; margin-left: -50px">
+                <tbody>
+                <tr>
+                <td style="height: 200px" colspan="2"></td>
+                </tr>
+                </tbody>
+                </table>    
+            </div>
+        </div>
+
+		</div>
+		
+
+</div>
+</div>    
+      </div>
+      <div class="modal-footer" style="background: #F8781D;">
+
+      	<button type="button" class="btn btn-primary btn-sm">GUARDAR <i class="fa fa-save"></i></button>
+          <button type="button" class="btn btn-success btn-sm">MODIFICAR <i class="fa fa-pencil-square-o"></i></button>
+            <button type="button" class="btn btn-warning btn-sm">BUSCAR <i class="fa fa-search"></i></button>
+           <button type="button" class="btn btn-danger btn-sm">ELIMINAR <i class="fa fa-trash"></i></button>
+        <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    
+
+  </div>
+</div>
+</div>
+
+</html>
+
+  <div class="row vertical-align">
+<footer>
+<br>
+Servicios Tecnologicos ALFA-X
+<BR>
+GUATEMALA, CENTROAMERICA<BR>
+TEL:    
+</footer>
+</div>
+-->

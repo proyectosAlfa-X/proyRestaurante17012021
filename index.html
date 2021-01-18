@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+    
+  <!--aqui se llama el unico archivo que creamos para los controladores, que es la parte donde van las funciones javascript  de todo el proyecto-->
+   
+
+	<title>
+		LOGIN
+	</title>
+</head>
+<body>
+
+
+
+<div class="login-page">
+	
+  <div class="form">
+
+  		  
+         <!-- <marquee BEHAVIOR=alternate>  <h2><p class="texto-blanco">Inicio de Sesi&oacute;n</p></h2></marquee>-->
+         <h2><p class="texto-blanco">INICIO DE SESI&Oacute;N</p></h2>
+          
+    <div class="row main-content bg-success text-center">
+      <div class="col-md-12 text-center company__info">
+        <span class="company__logo"><h2><span class="fa fa-android"></span></h2></span>
+        <h4 class="company_title"><marquee DIRECTION=right ><img  class="imagen2" SRC="img/ricodelli.png"></marquee></h4>
+  
+      </div>
+      </div>
+    <form  class="form-group" action="login/comprueba_login.php" method="post">
+      <input type="text" placeholder="usuario" name="usuario">
+      <input type="password" placeholder="password"  name="clave" />
+      <input type="submit" value="INGRESAR">
+      <p class="message">Todos los Derechos Reservados <BR> Soporte tecnico 4220-8473 / 4623-0291 <br> GUATEMALA, CENTRO AMERICA <br> <a href="#">Sistemas Informaticos ALFA-X </a></p>
+    </form>
+  </div>
+</div>
+</body>
+</html>
