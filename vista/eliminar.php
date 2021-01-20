@@ -70,7 +70,9 @@ require_once('../modelo/producto.php');
                          <div class="row">
                         <div class="col-sm-12">
                         <LABEL class="control-label formatoTextoL">IMAGEN </LABEL>
-                    <input type="file" enctype="multipart/form-data"  id="imagen3" placeholder="*IMAGEN"required="required" class="filestyle"  data-buttonName="btn-primary" style="background-color: #e2f0fb;">
+
+                        <input type="text" class="form-control colorInput estilord" name='imagen4' id="imagen4" value='<?php echo $producto->getImagenProducto()?>' placeholder="Stock/Existencia">
+                    <input type="FILE" enctype="multipart/form-data"  id='imagen3' name='imagen3' placeholder="*IMAGEN" value='<?php echo $producto->getImagenProducto()?>' required="required" class="filestyle"  data-buttonName="btn-primary" style="background-color: #e2f0fb;">
                 	</div>
                 	
                       </div>

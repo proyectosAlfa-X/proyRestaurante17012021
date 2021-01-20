@@ -3,6 +3,8 @@
 <head>
 
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script type="text/javascript" src="controlador/mostrar.js"></script>
+
 
     
   <!--aqui se llama el unico archivo que creamos para los controladores, que es la parte donde van las funciones javascript  de todo el proyecto-->
@@ -18,7 +20,7 @@
 
 <div class="login-page">
 	
-  <div class="form">
+  <div class="form ">
 
   		  
          <!-- <marquee BEHAVIOR=alternate>  <h2><p class="texto-blanco">Inicio de Sesi&oacute;n</p></h2></marquee>-->
@@ -33,8 +35,12 @@
       </div>
     <form  class="form-group" action="login/comprueba_login.php" method="post">
       <input type="text" placeholder="usuario" name="usuario">
-      <input type="password" placeholder="password"  name="clave" />
-      <input type="submit" value="INGRESAR">
+      <div class="campo">
+      <input type="password" placeholder="password"  name="clave" id="clave"/><span onclick="mostrarContrasena()" class="btn btn-primary"> mostrar</span>
+       
+       </div>
+      <input type="submit" value="INGRESAR" style="background:#7D3C98; color: white; font-weight: bold; " >
+      
       <p class="message">Todos los Derechos Reservados <BR> Soporte tecnico 4220-8473 / 4623-0291 <br> GUATEMALA, CENTRO AMERICA <br> <a href="#">Sistemas Informaticos ALFA-X </a></p>
     </form>
   </div>

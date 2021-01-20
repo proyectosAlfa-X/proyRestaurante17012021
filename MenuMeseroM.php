@@ -15,23 +15,26 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
-<nav>
-    <input type="checkbox" id="check">
+
+</head>
+<body>
+
+  
+  <nav>
+     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
     </label>
     <label class="logo">RICODELI</label>
-    <ul>
-        <li><a  class="active" href="#">INICIO</a></li>
-        <li><a href="#">FACTURACION</a></li>
-        <li><a href="#">COMPRAS</a></li>
-        <li><a href="#">MANUAL</a></li>
-        <li><a class="" href="login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
-    </ul>
-</nav>
+      <ul>
+        <li><a  class="active" style="text-decoration: none;" href="#">INICIO</a></li>
+        <li><a href="#" style="text-decoration: none;">FACTURACION</a></li>
+        <li><a href="#"style="text-decoration: none;">COMPRAS</a></li>
+        <li><a href="#" style="text-decoration: none;">MANUAL</a></li>
+        <li><a class="" style="text-decoration: none;" href="../login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
+      </ul>
+  </nav>  
 
-</head>
-<body>
  
 		<div>
 		<h3 class="text-center"><b class="text-info">RICODELI </b></h3>
@@ -42,6 +45,10 @@
 
 	<!-- tercera columna-->
 	<div class="form-group">
+	<div class="row" style="width:95%; line-height:400px;
+    margin:0px auto;
+    text-align:center;
+    ">
 	<div class="col-md-3">
 	 <a href=""><img class="img-thumbnail imagen"  src="img/Diapositiva1.png" alt="" /></a>
 	</div>
@@ -53,15 +60,16 @@
 	<div class="col-md-3">
 		<a href=""><img class="img-thumbnail imagen"  src="img/Diapositiva3.png" alt="" /></a>
 	</div>
-    </div>
-</div>
-<div class="form-group">
-<div class="row">
-	<!-- primera columna-->
 	<div class="col-md-3">
 	<img class="img-thumbnail imagen"  src="img/Diapositiva4.png" alt="" />
 	</div>
-	<!-- segunda columna-->
+    </div>
+</div>
+<div class="form-group">
+<div class="row"style="width:95%; line-height:400px;
+    margin:0px auto;
+    text-align:center;
+    ">
 	<div class="col-md-3">
 		<a href="vista/index.php"><img class="img-thumbnail imagen"  src="img/diapositiva5.png" alt="" /></a>
 	</div>
@@ -69,10 +77,6 @@
 	<div class="col-md-3">
 		<a href=""> <img class="img-thumbnail imagen"  src="img/Diapositiva6.png" alt="" /></a>
 	</div>
-
-	
-<div class="row">
-    <!-- cuarta columna-->
 	<div class="col-md-3">
 	<a class="" href="" ><img class="img-thumbnail imagen"  src="img/Diapositiva15.png" alt="" /></a>
 	</div>
@@ -81,14 +85,10 @@
 	<img class="img-thumbnail imagen" src="img/Diapositiva12.png" alt="" />
 	</a>
 </div>
-   </div>
-
- 
-	<!-- primera columna-->
-	
-    </div>
 </div>
-  <h3 class="text-center texto-negro">Presione el bot&oacute;n correspondiente</h3><br>
+</div>
+
+  <h3 class="text-center texto-negro" style="margin-top: 0px;">Presione el bot&oacute;n correspondiente</h3><br>
 </form>
 
 </body>

@@ -17,6 +17,7 @@ $producto = new Producto();
 		$producto->setIdSucursal($_POST['idSucursal']);
 		$producto->setCostoProducto($_POST['costoProducto']);
 		$producto->setStockProducto($_POST['stockProducto']);	
+		$producto->setImagenProducto($_POST['imagenProducto']);	
 		//llama a la función insertar definida en el crud
 		$crud->insertar($producto);
 		header('Location: ../vista/index.php');

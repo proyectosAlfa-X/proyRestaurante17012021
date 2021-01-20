@@ -13,25 +13,29 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
-<nav>
+
+</head>
+<body>
+
+  
+  <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
     </label>
     <label class="logo">RICODELI</label>
-    <ul>
-        <li><a  class="active" href="#">INICIO</a></li>
-        <li><a href="#">FACTURACION</a></li>
-        <li><a href="#">COMPRAS</a></li>
-        <li><a href="#">MANUAL</a></li>
-        <li><a class="" href="login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
-    </ul>
-</nav>
+      <ul>
+         <li><a  class="active" style="text-decoration: none;" href="#">INICIO</a></li>
+        <li><a href="#" style="text-decoration: none;">FACTURACION</a></li>
+        <li><a href="#"style="text-decoration: none;">COMPRAS</a></li>
+        <li><a href="#" style="text-decoration: none;">MANUAL</a></li>
+        <li><a class="" style="text-decoration: none;" href="../login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
+      </ul>
+  </nav>  
 
-</head>
-<body>
  
 		<div>
 		<h3 class="text-center"><b class="text-info">RICODELI </b></h3>
@@ -50,7 +54,7 @@
     </div>
 </div>
 <div class="form-group">
-<div class="row">
+
 	<!-- primera columna-->
 	<div class="col-md-4">
 	<a href="menuMeseroM.php"><img class="img-thumbnail imagen"  src="img/Diapositiva17.png" alt="" /></a>
@@ -58,7 +62,6 @@
 	<!-- segunda columna-->
 	
    <div class="form-group">
-<div class="row">
 	<!-- primera columna-->
 	<div class="col-md-4">
 	<img class="img-thumbnail imagen"  src="img/Diapositiva8.png" alt="" />

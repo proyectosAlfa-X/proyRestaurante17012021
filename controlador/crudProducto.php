@@ -8,7 +8,7 @@ require_once('../conexion/conexion.php');
 		// método para insertar, recibe como parámetro un objeto de tipo libro
 		public function insertar($producto){
 			$db=Db::conectar();
-			$insert=$db->prepare('INSERT INTO producto values(NULL,:nombreProducto,:idTipoProducto,:idUnidadMedida,:fechaIngresoProducto,:FechaVencimientoProducto,:estadoProducto,:idSucursal,:costoProducto,:stockProducto)');
+			$insert=$db->prepare('INSERT INTO producto values(NULL,:nombreProducto,:idTipoProducto,:idUnidadMedida,:fechaIngresoProducto,:FechaVencimientoProducto,:estadoProducto,:idSucursal,:costoProducto,:stockProducto, CONCAT("img/",:imagenProducto))');
 			$insert->bindValue('nombreProducto',$producto->getNombreProducto());
 			$insert->bindValue('idTipoProducto',$producto->getIdTipoProducto());
 			$insert->bindValue('idUnidadMedida',$producto->getIdUnidadMedida());
@@ -18,6 +18,7 @@ require_once('../conexion/conexion.php');
 			$insert->bindValue('idSucursal',$producto->getIdSucursal());
 			$insert->bindValue('costoProducto',$producto->getCostoProducto());
 			$insert->bindValue('stockProducto',$producto->getStockProducto());
+			$insert->bindValue('imagenProducto',$producto->getImagenProducto());
 			$insert->execute();
 
 		}
@@ -63,6 +64,7 @@ require_once('../conexion/conexion.php');
 			$myProducto->setIdSucursal($producto['idSucursal']);
 			$myProducto->setCostoProducto($producto['costoProducto']);
 			$myProducto->setStockProducto($producto['stockProducto']);
+			$myProducto->setImagenProducto($producto['imagenProducto']);
 			
 			return $myProducto;
 		}

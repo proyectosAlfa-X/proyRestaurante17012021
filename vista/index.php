@@ -33,16 +33,16 @@
   
   <nav>
     <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
+    <label for="check" class="checkbtn" style="margin-top: -3px;">
         <i class="fas fa-bars"></i>
     </label>
     <label class="logo">RICODELI</label>
       <ul>
-        <li><a  class="active" href="#">INICIO</a></li>
-        <li><a href="#">FACTURACION</a></li>
-        <li><a href="#">COMPRAS</a></li>
-        <li><a href="#">MANUAL</a></li>
-        <li><a class="" href="../login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
+        <li><a  class="active" style="text-decoration: none;" href="#">INICIO</a></li>
+        <li><a href="#" style="text-decoration: none;">FACTURACION</a></li>
+        <li><a href="#"style="text-decoration: none;">COMPRAS</a></li>
+        <li><a href="#" style="text-decoration: none;">MANUAL</a></li>
+        <li><a class="" style="text-decoration: none;" href="../login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
       </ul>
   </nav>  
 
@@ -58,31 +58,32 @@
                 <div class="row">
                   <div class="col-sm-4">
                     <label for="name" class=" control-label bordesredondos" style="height: 5px; color: purple">Nombre Producto</label>
-                    <input type="text" class="form-control colorInput2 estilord" id="nombreProducto" name='nombreProducto' placeholder="*PRODUCTO" required="required">
+                    <input type="text" class="form-control colorInput2 estilord desbloquea" id="nombreProducto" name='nombreProducto' placeholder="*PRODUCTO" required="required" disabled="disabled">
                   </div>
                   <div class="col-sm-4">   
                     <label for="zipcode"  class=" control-label" style="color: purple">Tipo de Producto</label>
-                    <input type="text" class="form-control colorInput2 estilord" id="idTipoProducto" name='idTipoProducto' placeholder="*TIPO DE PRODUCTO">
+                    <input type="text" class="form-control colorInput2 estilord desbloquea"
+                    required="required" disabled="disabled" id="idTipoProducto" name='idTipoProducto' placeholder="*TIPO DE PRODUCTO">
                   </div>
                     <div class="col-sm-4" >
                       <label for="city" class=" control-label" style="color: purple;">Unidad de medida</label>
-                      <input type="text" class="form-control estilord"id='idUnidadMedida' name='idUnidadMedida' placeholder="*UNIDAD DE MEDIDA">
+                      <input type="text" class="form-control estilord desbloquea" required="required" disabled="disabled" id='idUnidadMedida' name='idUnidadMedida' placeholder="*UNIDAD DE MEDIDA">
                     </div>
                   </div>
                 </div>
                 <div class="form-group" style="margin-top:0px; margin-bottom: 0px";>
                   <div class="row">     
                     <div class="col-sm-4">
-                      <label for="fingreso" class=" control-label" style="color: purple">fecha de Ingreso producto</label>
-                      <input type="text" class="form-control colorInput estilord" id="fechaIngresoProducto" name='fechaIngresoProducto' placeholder="*FECHA DE INGRESO">
+                      <label for="fingreso" class=" control-label style="color: purple">fecha de Ingreso producto</label>
+                      <input type="text" class="form-control colorInput estilord desbloquea" required="required" disabled="disabled" id="fechaIngresoProducto" name='fechaIngresoProducto' placeholder="*FECHA DE INGRESO">
                     </div>
                     <div class="col-sm-4">
                       <label for="fvencimiento" class=" control-label"style="color: purple">Fecha de Vencimiento</label>
-                      <input type="text" class="form-control colorInput estilord" id='fechaVencimientoProducto' name='fechaVencimientoProducto' placeholder="*FECHA DE VENCIMIENTO">
+                      <input type="text" class="form-control colorInput estilord desbloquea" required="required" disabled="disabled" id='fechaVencimientoProducto' name='fechaVencimientoProducto' placeholder="*FECHA DE VENCIMIENTO">
                     </div>
                     <div class="col-sm-4">
                       <label for="estado" class=" control-label"style="color: purple">Estado</label>
-                      <input type="text" class="form-control colorInput estilord" id="estadoProducto" name='estadoProducto' placeholder="*ESTADO">
+                      <input type="text" class="form-control colorInput estilord desbloquea" required="required" disabled="disabled" id="estadoProducto" name='estadoProducto' placeholder="*ESTADO">
                     </div>
                   </div>
                 </div>
@@ -90,15 +91,15 @@
                   <div class="row">
                     <div class="col-sm-4">
                       <label for="sucursal" class=" control-label"style="color: purple">Sucursal</label>
-                      <input type="text" class="form-control estilord" id="idSucursal" name='idSucursal' placeholder="*SUCURSAL">
+                      <input type="text" class="form-control estilord desbloquea" required="required" disabled="disabled" id="idSucursal" name='idSucursal' placeholder="*SUCURSAL">
                     </div>
                       <div class="col-sm-4">
                         <label for="costo" class=" control-label"style="color: purple">Costo Producto</label>
-                        <input type="text" class="form-control estilord" id='costoProducto' name='costoProducto' placeholder="*COSTO PRODCUTO">
+                        <input type="text" class="form-control estilord desbloquea" required="required" disabled="disabled" id='costoProducto' name='costoProducto' placeholder="*COSTO PRODCUTO">
                       </div>
                       <div class="col-sm-4">
                         <label for="stock" class="control-label"style="color: purple">Stock/Existencia</label>
-                        <input type="text" class="form-control colorInput estilord" id="stockProducto" name='stockProducto' placeholder="*EXISTENCIA/STOCK">
+                        <input type="text" class="form-control colorInput estilord desbloquea" required="required" disabled="disabled" id="stockProducto" name='stockProducto' placeholder="*EXISTENCIA/STOCK">
                       </div>
                     </div>
                 </div>
@@ -106,7 +107,7 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <LABEL for="imagen" class="control-label "style="color: purple">IMAGEN </LABEL>
-                      <input type="file" enctype="multipart/form-data"  id="imagen" placeholder="*IMAGEN"required="required" class="filestyle"  data-buttonName="btn-primary" style="background-color: #e2f0fb;">
+                      <input type="file" enctype="multipart/form-data"  id="imagenProducto" name="imagenProducto" placeholder="*IMAGEN"required="required" class="filestyle"  data-buttonName="btn-primary" style="background-color: #e2f0fb;">
                       <input type='hidden' name='insertar' value='insertar'>
                     </div> 
                   </div>
@@ -117,10 +118,12 @@
               <div class="form-group" style="margin-top: 0px;">
                 <div class="col-sm-6" style="margin-top: -5PX;">
                   <label for="imagen"  class="col-sm-6 control-label" style="text-align: center;">Imagen</label>
-                    <table border="1" style="width: 100%;">
+                    <table border="1" style="width: 130px;">
                       <tbody>
                         <tr>
-                          <td style="height: 200px" colspan="2"></td>
+                          
+                          <td style="height: 190px" colspan="2" id="preview"   alt="" />  </td>
+
                         </tr>
                       </tbody>
                     </table>    

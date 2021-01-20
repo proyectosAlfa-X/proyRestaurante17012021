@@ -10,6 +10,7 @@ class Producto{
 		private $idSucursal;
 		private $costoProducto;
 		private $stockProducto;
+		private $imagenProducto;
 
 		function __construct(){}
 
@@ -88,6 +89,14 @@ class Producto{
 
 		public function setStockProducto($stockProducto){
 			$this->stockProducto = $stockProducto;
+		}
+
+		public function getImagenProducto(){
+			return $this->imagenProducto;
+		}
+
+		public function setImagenProducto($imagenProducto){
+			$this->imagenProducto = $imagenProducto;
 		}
 
 	}

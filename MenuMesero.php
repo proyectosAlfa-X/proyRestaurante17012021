@@ -22,11 +22,11 @@
     </label>
     <label class="logo">RICODELI</label>
     <ul>
-        <li><a  class="active" href="#">INICIO</a></li>
-        <li><a href="#">FACTURACION</a></li>
-        <li><a href="#">COMPRAS</a></li>
-        <li><a href="#">MANUAL</a></li>
-        <li><a href="#">REPORTES</a></li>
+       <li><a  class="active" style="text-decoration: none;" href="#">INICIO</a></li>
+        <li><a href="#" style="text-decoration: none;">FACTURACION</a></li>
+        <li><a href="#"style="text-decoration: none;">COMPRAS</a></li>
+        <li><a href="#" style="text-decoration: none;">MANUAL</a></li>
+        <li><a class="" style="text-decoration: none;" href="../login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
     </ul>
 </nav>
 

@@ -1,3 +1,4 @@
+
 function listar_dato(){
     var ob = "";
  $.ajax({
@@ -16,10 +17,60 @@ function listar_dato(){
 
 }
 
+function subirImagen(){
+    
+        var formData = new FormData();
+        var files = $('#imagenProducto')[0].files[0];
+        formData.append('file',files);
+        $.ajax({
+            url: '../modelo/upload.php',
+            type: 'post',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                if (response != 0) {
+                    $(".card-img-top").attr("src", response);
+                } else {
+                    alert('Formato de imagen incorrecto.');
+                }
+            }
+        });
+        return false;
+    }
+
+
+    
+
 function guardar(){
+  subirImagen(); 
   realizado();
 
 }
+
+
+document.getElementById("imagenProducto").onchange = function(e) {
+  // Creamos el objeto de la clase FileReader
+  let reader = new FileReader();
+
+  // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+  reader.readAsDataURL(e.target.files[0]);
+
+  // Le decimos que cuando este listo ejecute el código interno
+  reader.onload = function(){
+    let preview = document.getElementById('preview'),
+            image = document.createElement('img');
+            image.style.width= '186px';
+            image.style.height= '194px';
+
+
+    image.src = reader.result;
+
+    preview.innerHTML = '';
+    preview.append(image);
+  };
+}
+
 
 
 
@@ -45,6 +96,28 @@ toastr.options = {
 }
 
 
+}
+
+function noRealizado(){
+ Command: toastr["error"]("El registro no se pudo guardar", "!ERROR!")
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
 }
 
 
@@ -148,7 +221,9 @@ var ob = {idProducto:idProducto,nombreProducto:nombreProducto,idTipoProducto:idT
 
 function btn_eliminar(idProducto){
     //el arreglo que se mandara en el metodo ajax solo llevara el codigo que es codVehiculo 
+   
    var ob = {idProducto:idProducto};
+
   alert(idProducto);
    //metodo ajax que se encarga de enviar los datos o recibirlos jajaja
  $.ajax({
@@ -176,6 +251,8 @@ function btn_guardar_eliminar()
 
 //solo se va a declarar una variable que va a servir como parametro para identifficar el registro
 var idProducto = $("#idProducto_d").val();
+var img4 = $("#imagen4").val();
+
 
     //alert (fechai+"-"+marca+"-"+modelo+"-");//+color+"-"+placa+"-"+nchasis+"-"+motor+"-"+kmetraje+"-"+estadov+"-"+sucursal+"-"+caja+"-"+vehiculo);
 //(fechai + "-" + marca + "-" + modelo + "-" + color + "-" + placa + "-" + nchasis + "-" + motor + "-" + kmetraje + "-" + estadov + "-" + sucursal + "-" + caja + "-" + vehiculo);
@@ -183,7 +260,7 @@ var idProducto = $("#idProducto_d").val();
 
 /*el arreglo de ob solo lleva esta variable de javascrip que se decalro 
  recorda que despues de los : mejor si se llama igual*/
-var ob = {idProducto:idProducto};
+var ob = {idProducto:idProducto,img4:img4};
  $.ajax({
                 //forma en que se van a enviar los datos en el ajax POST
                 type: "POST",
@@ -209,6 +286,7 @@ var ob = {idProducto:idProducto};
                  },2500);
 
                  setTimeout(function(){
+                  
                   listar_dato();
                  },3000);
                 

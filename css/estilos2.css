@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@simport url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 *{
   padding: 0;
@@ -94,6 +94,7 @@ nav ul li a {
 @media (max-width: 858px){
   .checkbtn{
     display: block;
+    margin-top: 20px;
 
   }
   ul{
@@ -120,11 +121,13 @@ nav ul li a {
   }
   a:hover,a.active{
     background:  #AF7AC5;
-    color: #AF7AC5;
+    color:#FFFFFF;
     font-style: bold;
+    
   }
   #check:checked ~ ul{
     left:0;
+
   } 
 }
 

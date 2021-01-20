@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-01-2021 a las 01:17:12
+-- Tiempo de generación: 20-01-2021 a las 07:43:42
 -- Versión del servidor: 10.3.16-MariaDB
 -- Versión de PHP: 7.3.7
 
@@ -278,18 +278,39 @@ CREATE TABLE `producto` (
   `estadoProducto` varchar(1) DEFAULT NULL,
   `idSucursal` int(11) DEFAULT NULL,
   `costoProducto` float DEFAULT NULL,
-  `stockProducto` float DEFAULT NULL
+  `stockProducto` float DEFAULT NULL,
+  `imagenProducto` varchar(45) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`idProducto`, `nombreProducto`, `idTipoProducto`, `idUnidadMedida`, `fechaIngresoProducto`, `FechaVencimientoProducto`, `estadoProducto`, `idSucursal`, `costoProducto`, `stockProducto`) VALUES
-(4, 'PATATA', 1, 1, '2021-05-05', '2021-06-06', 'E', 1, 200, 21),
-(6, 'TOMATE', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 20, 2),
-(7, 'TOMATE', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 20, 2),
-(8, 'TOMATE', 1, 1, '2021-05-05', '2021-05-05', 'A', 1, 12, 12);
+INSERT INTO `producto` (`idProducto`, `nombreProducto`, `idTipoProducto`, `idUnidadMedida`, `fechaIngresoProducto`, `FechaVencimientoProducto`, `estadoProducto`, `idSucursal`, `costoProducto`, `stockProducto`, `imagenProducto`) VALUES
+(4, 'PATATA', 1, 1, '2021-05-05', '2021-06-06', 'E', 1, 200, 21, ''),
+(6, 'TOMATE', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 20, 2, ''),
+(7, 'TOMATE', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 20, 2, ''),
+(8, 'TOMATE', 1, 1, '2021-05-05', '2021-05-05', 'E', 1, 12, 12, ''),
+(10, 'CEBOOLA', 1, 1, '2021-01-01', '2021-01-01', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(11, 'ZANAHORIA', 1, 1, '2021-01-01', '2021-01-01', 'E', 1, 12, 12, 'img/PIZZA.JPG'),
+(12, 'LECHUGA', 1, 1, '2021-01-01', '2021-01-01', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(13, 'zanahoria', 1, 1, '2021-02-02', '2021-02-02', 'E', 1, 12, 12, 'img/PAN CON JAMON.JPG'),
+(14, 'CEBOLLA', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(15, 'CEBOLLA', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(16, 'CEBOLLA', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 12, 12, 'img/PIZZA.JPG'),
+(17, 'ZANAHORIA', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(18, 'ZANAHORIA', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(19, 'CEBOLLA', 1, 1, '2020-12-12', '2020-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(20, 'CEBOLLA', 1, 1, '2020-12-12', '2020-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(22, 'CEBOLLA', 1, 1, '2020-12-12', '2020-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(23, 'CEBOLLA', 1, 1, '2020-12-12', '2020-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(24, 'CEBOLLA', 1, 1, '2020-12-12', '2020-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(25, 'CEBOLLA', 1, 1, '2020-01-01', '2020-01-01', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(26, 'CEBOLLA', 1, 1, '2020-01-01', '0000-00-00', '2', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(27, 'CEBOLLA', 1, 1, '2020-01-01', '2020-01-01', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(28, 'CEBOLLA', 1, 1, '2020-01-01', '2020-01-01', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(29, 'CEBOLLA', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG'),
+(30, 'CEBOLLA', 1, 1, '2021-12-12', '2021-12-12', 'E', 1, 12, 12, 'img/HAMBURGUESA.JPG');
 
 -- --------------------------------------------------------
 
@@ -724,7 +745,7 @@ ALTER TABLE `platillo`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `propietario`

@@ -9,13 +9,15 @@
 require_once('../conexion/conexion2.php');
 //se mandan a llamar los datos del javascript  del arreglo del ob de tipo POST
  $idProducto = $_POST['idProducto']; 
- echo ($idProducto);
+ $img4= $_POST['img4'];
+ echo ($idProducto." ".$img4);
  
  //variables de conexion y consulta que contiene el procedimiento almacenado que se declaro en la base de datos en phpMyAdmin
  $db4 = Conexion::StartUp();       
  try { 	   
  $guarda22=$db4->query("CALL eliminar('$idProducto')");
  	if($guarda22==TRUE){
+ 		 unlink("../".$img4) 
 
 ?>
  <!--print "<script>alert(\"Registro guardado exitosamente.\");window.history.back();</script>";-->
