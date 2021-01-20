@@ -14,7 +14,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
+<?php
+session_start();
+if(!isset($_SESSION["usuario"])){
+//$user=$_SESSION['usuario']
+    header("location:login/cierre.php"); // escribir en todas las pag
+}/*else
+if($_SESSION['rol']!='operador'){
+  header("location:../login/login.html"); // escribir en todas las pag
+}*/
+?>
 <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
@@ -22,11 +31,11 @@
     </label>
     <label class="logo">RICODELI</label>
     <ul>
-       <li><a  class="active" style="text-decoration: none;" href="#">INICIO</a></li>
+      <li><a  class="active" style="text-decoration: none;" href="MenuPrincipal.php">MEN&Uacute; PRINCIPAL</a></li>
         <li><a href="#" style="text-decoration: none;">FACTURACION</a></li>
         <li><a href="#"style="text-decoration: none;">COMPRAS</a></li>
         <li><a href="#" style="text-decoration: none;">MANUAL</a></li>
-        <li><a class="" style="text-decoration: none;" href="../login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
+       <li><a class="" style="text-decoration: none;" href="login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
     </ul>
 </nav>
 

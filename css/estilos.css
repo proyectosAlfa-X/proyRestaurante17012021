@@ -34,7 +34,7 @@
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 
 }
-.form input {
+.efectos2 {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -46,7 +46,20 @@
   font-size: 14px;
   border-radius: 24px;
 }
-.form button {
+
+.efectos {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #8E44AD;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 24px;
+}
+.efectos {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -62,16 +75,21 @@
   border-radius: 24px;
   font-weight: bolder;
 }
-.form button:hover,.form button:active,.form button:focus {
+.efectos:hover,.efectis:active,.efectos button:focus {
   background: #8E44AD;
   border-radius: 24px;
+}
+
+
+.efectos:hover:before {
+width: 100%;
 }
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
-.form .message a {
+.form .message a {  
   color: #4CAF50;
   text-decoration: none;
 }

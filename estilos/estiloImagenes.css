@@ -1,0 +1,24 @@
+.navbar-custom {
+    background-color:#202355;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color:transparent;
+}
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+.navbar-custom{
+	background-color: #ff5500;
+}
+
+#efecto {
+	transition:all .5s ease-in-out;
+	}
+	
