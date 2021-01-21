@@ -13,9 +13,9 @@ $listaProductos=$crud->mostrar();
 <div class="row vertical-align" style="margin-top: -20px ; margin-left: -20px; margin-right: 5px;">
         <div class="col-xs-12 margenes">
         
-        <table id="tableUserList" style="background: white; border-radius: -20px;" class="table table-bordered table-hover table-responsive margenes table-striped">
+        <table id="tableUserList" style=" border-radius: -20px;" class="table table-bordered  table-responsive margenes ">
     <h2 style="text-align: center; margin-top:none; font-size: 20px" >Datos del Producto</h2>
-    <thead style=" background:#A9ABE4; font-size: 15px; ">
+    <thead style=" font-size: 15px; ">
         <tr>
             <th  style="color: white; font-size: 12px; text-align: center" data-label="id">Id</th>
             <th  style="color: white; font-size: 12px;text-align: center"data-label="Nombre Usuario"colspan="2">Nombre </th>

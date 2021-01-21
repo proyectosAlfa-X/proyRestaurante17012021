@@ -3,9 +3,59 @@
 <head>
 
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <script type="text/javascript" src="controlador/mostrar.js"></script>
+    
 
+<script type="text/javascript">
+  function mostrarContrasena(){
+    var tipo= document.getElementById('clave');
+    var t=document.getElementById('btns');
+    if(tipo.type=="password"){
+      tipo.type="text";
+      t.value="OCULTAR"
+      
 
+    }else{
+      tipo.type="password";
+      t.value="VER";
+    }
+
+  }
+  function mayusP(e) {
+    e.value = e.value.toUpperCase();
+    var t=document.getElementById('btns');
+    t.style.display  ='block';
+   // $(".desbloquea").removeAttr("disabled");
+   // pt=document.getElementById('password');
+
+var cadena =document.getElementById('clave').value;
+var cadena1 =document.getElementById('clave');
+var t=document.getElementById('btns');
+var numeroLetras = cadena.length;
+//alert(numeroLetras);
+
+    
+/*pt.addEventListener('keydown', function(event) { 
+            const key = event.key; 
+            
+            if (key === "Backspace" || key === "Delete") { 
+                t.style.display  ='none';
+            } else
+
+t.style.display  ='block';
+            
+        }); */
+        if(numeroLetras===0) {
+          t.style.display  ='none';
+           cadena1.type="password";
+      t.value="VER";
+        }
+    
+}
+function mayus(e) {
+    e.value = e.value.toUpperCase();
+    
+}
+</script>
     
   <!--aqui se llama el unico archivo que creamos para los controladores, que es la parte donde van las funciones javascript  de todo el proyecto-->
    
@@ -36,7 +86,8 @@
     <form  class="form-group" action="login/comprueba_login.php" method="post">
       <input type="text" class="efectos2" placeholder="usuario" name="usuario">
       <div class="campo">
-      <input type="password" placeholder="password"  name="clave" id="clave"/ class="efectos2"><span onclick="mostrarContrasena()" class="btn btn-primary"> mostrar</span>
+      <input type="password" placeholder="password"  name="clave" id="clave"/ class="efectos2" onkeyup="mayusP(this);" required="required">
+      <input class="btn btn-theme04" type="button" onclick="mostrarContrasena();" id="btns" value="VER" style="display:none;"></button>
        
        </div>
       <input type="submit" id="ingresar" class="efectos" value="INGRESAR" style=" color: white; font-weight: bold; " >

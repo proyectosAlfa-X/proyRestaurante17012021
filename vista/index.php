@@ -53,7 +53,7 @@ if($_SESSION['rol']!='operador'){
         <li><a href="#" style="text-decoration: none;">FACTURACION</a></li>
         <li><a href="#"style="text-decoration: none;">COMPRAS</a></li>
         <li><a href="#" style="text-decoration: none;">MANUAL</a></li>
-        <li><a class="" style="text-decoration: none;" href="login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
+        <li><a class="" style="text-decoration: none;" href="../login/cierre.php" >CERRAR SESI&Oacute;N</REPORTE></a></li>
       </ul>
   </nav>  
 
