@@ -73,8 +73,7 @@ require_once('../modelo/producto.php');
                          <div class="row">
                         <div class="col-sm-12">
                        <LABEL class="control-label formatoTextoL">IMAGEN </LABEL>
-                       <input type="text" name="" id="campoimg" value="<?php echo $producto->getImagenProducto() ?>">
-                    <input type="file" enctype="multipart/form-data"  id="imagenModificar" placeholder="*IMAGEN"required="required" class="filestyle"  data-buttonName="btn-primary" style="background-color: #e2f0fb;">
+                    <input type="file" enctype="multipart/form-data"  id="imagen2" placeholder="*IMAGEN"required="required" class="filestyle"  data-buttonName="btn-primary" style="background-color: #e2f0fb;">
                 	</div>
                 	
                       </div>
@@ -90,7 +89,7 @@ require_once('../modelo/producto.php');
                     <table border="1" style="width: 70%;">
                 <tbody>
                 <tr>
-                <td style="height: 200px " colspan="2" id="previewModificar"><img src="<?php echo "../".$producto->getImagenProducto() ?>" style= "width: 186px; height: 194px;"></td>
+                <td style="height: 200px" colspan="2"></td>
                 </tr>
                 </tbody>
                 </table>    

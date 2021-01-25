@@ -46,7 +46,7 @@ if($_SESSION['rol']!='operador'){
 		<div>
 		<h3 class="text-center"><b class="text-info">RICODELI </b></h3>
 		</div>
-		<h3 class="text-center"><b class="text-info">Men&uacute; dee Cocinero</b></h3>
+		<h3 class="text-center"><b class="text-info">Men&uacute; de Cocinero</b></h3>
 		<form action="" method="post">
 		<!-- primera columna -->
 

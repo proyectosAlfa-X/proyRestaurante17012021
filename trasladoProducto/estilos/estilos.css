@@ -1,0 +1,363 @@
+/* empieza login*/
+.main-content{
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.4);
+    margin: 5em auto;
+    display: flex;
+}
+.sss{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+.company__info{
+    background-color: #202355;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    border-color: #202355;
+    /*  */
+       -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    z-index: 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transition: all ease-out 0.2s 0.1s;
+    transition: all ease-out 0.2s 0.1s;
+
+}
+.fa-android{
+    font-size:3em;
+}
+@media screen and (max-width: 640px) {
+    .main-content{width: 90%;}
+    .company__info{
+        display: none;
+    }
+    .login_form{
+        border-top-left-radius:20px;
+        border-bottom-left-radius:20px;
+        border-color: #202355;
+       /* border-bottom: 2px solid #aaa;
+    border-top: 2px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-right: 2px solid #aaa;*/
+    
+    }
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+    .main-content{width: 70%;}
+}
+/*.row > h2{
+    color:#000;*/
+}
+.login_form{
+    
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    border-top:1px solid #000;
+    border-right:1px solid #000;
+}
+form{
+    padding: 0 2em;
+}
+.form__input{
+    width: 100%;
+    border:0px solid transparent;
+    border-radius: 0;
+    /*border-bottom: 1px solid #e2f0fb;
+    border-top: 1px solid #e2f0fb;
+    border-left: 1px solid #e2f0fb;
+    border-right: 1px solid #e2f0fb;*/
+    padding: 1em .5em .5em;
+    padding-left: 2em;
+    outline:none;
+    margin:1.5em auto;
+    transition: all .5s ease;
+    /*background-color: #e2f0fb;*/
+    background-color: white;
+}
+.form__input:focus{
+    border-bottom-color: #008080;
+    box-shadow: 0 0 5px rgba(0,80,80,.4); 
+    border-radius: 4px;
+}
+.botonL{
+    transition: all .5s ease;
+    width: 70%;
+    border-radius: 30px;
+    color:#008080;
+    font-weight: 600;
+    background-color:  #202355;
+    border: 1px solid #008080;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+.botonL:hover, .botonL:focus{
+    background-color:#000;
+    color:#fff;
+    
+}
+/* termina login*/
+/*barra de menu*/
+.navbar-custom {
+    background-color:#202355;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color:transparent;
+}
+.imagen:hover {/*-webkit-transform: rotate(5deg);transform: rotate(5deg);*/
+
+        /* tranformamos  su tamaño al pasar el mouse por encima con scale(2.5). */
+        transform : scale(1.1);
+        -moz-transform : scale(1.1);      /* Firefox */
+        -webkit-transform : scale(1.1);   /* Chrome - Safari */
+        -o-transform : scale(1.1);        /* Opera */
+  
+
+
+    }/*rota img en grados*/
+/* termina barra de menu*/
+/* centrar panel */
+.destacado {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 0.0em;
+  margin-bottom: 1em;
+}
+.tFmenu {
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-top: 0.01em;
+  /*margin-bottom: 1em;*/
+}
+
+.lateral { width: 200px; }
+
+.grisFondo{
+    background-color: #eee;
+}
+
+/* color encabezado modal*/
+.modal-header {
+       padding:9px 15px;
+       border-bottom:1px solid #eee;
+       background-color: #4682b4;
+       -webkit-border-top-left-radius: 5px;
+       -webkit-border-top-right-radius: 5px;
+       -moz-border-radius-topleft: 5px;
+       -moz-border-radius-topright: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        /*border-color: #4682b4;*/
+    }
+    /*color borde modal*/
+    .colorBorde{
+        border-top: 30px #4682b4;
+        border-right-color: 30px #4682b4;
+        border-bottom-color: 30px #4682b4;
+        border-left-color: 30px #4682b4;
+        
+        
+    }
+    /*encabezado tabla*/
+    .tabla-header{
+        background-color: #4682b4;
+       
+    }
+    /*color borde tabla*/
+  /*  .tabla-borde{
+        border-color: #4682b4;
+    }*/
+    .tablaFondo{
+         background-color: #e2f0fb;
+    }
+    /*color hover tabla*/
+    
+    .texto-blanco{
+        color: white;
+    }
+    .texto-amarillo{
+        color: yellow;
+    }
+     .texto-gris{
+        color:gray;
+    }
+     .texto-rojo{
+        color: red;
+    }
+    .texto-negro{
+        color: black;
+    }
+    .btn-black{
+        background-color: #000;
+    }
+    /* tabla responsiva*/
+    .container {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.table {
+    width: 100%;
+    border: 1px solid #084D6E;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+
+.table caption {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+    color:#084D6E;
+}
+
+.table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #084D6E;
+
+
+}
+
+.table th, .table td {
+    font-size: 11px;/* tamanio de letra en la tabla*/
+    padding: 8px;
+    text-align: center;
+     border: 1px solid #084D6E;
+}
+
+
+.table thead th{ 
+    text-transform: uppercase;
+    background-color:#4682b4;
+    border: 1px solid #084D6E;
+     font-size: 11px;
+
+
+}
+
+/*.table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 3px solid #000;
+}
+
+.table tbody td:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+*/
+/*dimenciones donde se hace responsive la tabla 1000*/ 
+@media screen and (max-width: 1010px) {
+    .table {
+        border: 0px;
+    }
+    .table caption {
+        font-size: 22px;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 8px;
+        border-bottom: 1px solid #4682b4;
+        display: block;
+    }
+    .table th, .table td {
+        font-size: 12px;
+    }
+    .table td {
+        display: block;
+        border-bottom: 1px solid #4682b4;
+        text-align: right;
+    }
+    .table  td:last-child {
+        border-bottom: 0px;
+    }
+    .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+        /*color: black;*/
+    }
+
+}
+/*termina tabla responsiva*/
+/*ancho ventana modal*/
+@media (max-width: 1500px) {
+   .tModal{
+      width: 400%; 
+   }
+   
+}
+ .tBoton{
+        font-size:10.5px;
+         text-align:center;
+       /* font-family:Verdana,Helvetica;
+        font-weight:bold;
+        color:white;
+        background:#638cb5;
+        border:0px;*/
+        width:60px; /*ancho*/
+        height:20px; /*alto*/
+       }
+    
+.imagen2{
+    width:80px;
+    height:50px;
+   } 
+   /* barra de desplazamiento en panel*/
+   .barraDespla {
+  height:470px;
+  overflow-y: scroll;
+} /* 3700 cada familia 15 quintales de cemento   47180936 */
+
+/* altura de input y tama;o de lettra*/
+ .formatoInput{
+    height:26px;
+    font-size: 11px;
+    background-color: #e2f0fb;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+ }
+ .formatoTextoL{
+ font-size: 11px;
+ font-weight: bold;
+ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+
+ }
+
+ input.invalid{
+   box-shadow: 0 0 5px 1px red;
+  
+  height:26px;
+    font-size: 11px;
+    background-color: #e2f0fb;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    width: 100%;
+   }
+   
+   input.valid{
+  height:26px;
+  box-shadow: none;
+    font-size: 11px;
+    background-color: #e2f0fb;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+
+   }

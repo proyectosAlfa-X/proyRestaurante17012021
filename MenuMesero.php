@@ -51,15 +51,17 @@ if($_SESSION['rol']!='operador'){
 
 	<!-- tercera columna-->
 	<div class="form-group">
+		<div class="row" style="width:95%; height: 400px; line-height:400px;
+    margin:0px auto;
+    text-align:center;
+    ">
 	<div class="col-md-6">
 	 <a href="../usuario/usuario.php"><img class="img-thumbnail imagen"  src="img/Diapositiva6.png" alt="" /></a>
 	</div>
 	<!-- cuarta columna-->
 	
-    </div>
-</div>
+   
 <div class="form-group">
-<div class="row">
 	<!-- primera columna-->
 	<div class="col-md-6">
 	<a href="menuMeseroM.php"><img class="img-thumbnail imagen"  src="img/Diapositiva22.png" alt="" /></a>
@@ -67,7 +69,8 @@ if($_SESSION['rol']!='operador'){
 	<!-- segunda columna-->
 	
    
- 
+</div>
+</div> 
 	<!-- primera columna-->
 	
     </div>

@@ -18,21 +18,13 @@ require_once('../conexion/conexion2.php');
  $idSucursal = $_POST['idSucursal']; 
  $costoProducto = $_POST['costoProducto']; 
  $stockProducto = $_POST['stockProducto']; 
- $imagen = $_POST['imagenModificar'];
- $campoimg=$_POST['campoimg'];
- if ($imagen==null){
-$imagen="C:\fakepath".substr($campoimg,4);
-} else {
-	$imagen=$_POST['imagenModificar'];
-	unlink("../".$campoimg);
-}
+
  echo ($idProducto." ".$nombreProducto." ".$idTipoProducto." ".$idUnidadMedida." ".$fechaIngresoProducto." ".$fechaVencimientoProducto." ".$estadoProducto." ".$idSucursal." ".$costoProducto." ".$stockProducto);
  
  //variables de conexion y consulta que contiene el procedimiento almacenado que se declaro en la base de datos en phpMyAdmin
  $db4 = Conexion::StartUp();       
  try { 	   
- 	
- $guarda22=$db4->query("CALL actualizar('$idProducto', '$nombreProducto', '$idTipoProducto', '$idUnidadMedida', '$fechaIngresoProducto', '$fechaVencimientoProducto', '$estadoProducto', '$idSucursal', '$costoProducto', '$stockProducto', '$imagen')");
+ $guarda22=$db4->query("CALL actualizar('$idProducto', '$nombreProducto', '$idTipoProducto', '$idUnidadMedida', '$fechaIngresoProducto', '$fechaVencimientoProducto', '$estadoProducto', '$idSucursal', '$costoProducto', '$stockProducto')");
  	if($guarda22==TRUE){
 
 ?>

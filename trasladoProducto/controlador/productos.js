@@ -72,32 +72,6 @@ document.getElementById("imagenProducto").onchange = function(e) {
 }
 
 
-document.getElementById("imagenModificar").onchange = function(e) {
-  // Creamos el objeto de la clase FileReader
-  let reader = new FileReader();
-
-  // Leemos el archivo subido y se lo pasamos a nuestro fileReader
-  reader.readAsDataURL(e.target.files[0]);
-
-  // Le decimos que cuando este listo ejecute el código interno
-  reader.onload = function(){
-    let preview = document.getElementById('previewModificar'),
-            image = document.createElement('img');
-            image.style.width= '186px';
-            image.style.height= '194px';
-
-
-    image.src = reader.result;
-    
-
-    preview.innerHTML = '';
-    preview.append(image);
-  };
-}
-
-
-
-
 
 
 function realizado(){
@@ -157,8 +131,6 @@ toastr.options = {
 
 
 function btn_editar(idProducto){
-
-
     //el arreglo que se mandara en el metodo ajax solo llevara el codigo que es codVehiculo 
    var ob = {idProducto:idProducto};
   alert(idProducto);
@@ -197,17 +169,14 @@ var estadoProducto = $("#estadoProducto_ed").val();
 var idSucursal = $("#idSucursal_ed").val();
 var costoProducto = $("#costoProducto_ed").val();
 var stockProducto = $("#stockProducto_ed").val();
-var imagenModificar = $("#imagenModificar").val();
-var campoimg = $("#campoimg").val();
 
-alert(imagenModificar);
     //alert (fechai+"-"+marca+"-"+modelo+"-");//+color+"-"+placa+"-"+nchasis+"-"+motor+"-"+kmetraje+"-"+estadov+"-"+sucursal+"-"+caja+"-"+vehiculo);
 //(fechai + "-" + marca + "-" + modelo + "-" + color + "-" + placa + "-" + nchasis + "-" + motor + "-" + kmetraje + "-" + estadov + "-" + sucursal + "-" + caja + "-" + vehiculo);
 
 /*el arreglo de datos que se van a enviar por ajax contiene las variables javascript que se acaban de declarar
 despues de los : mejor si colocas el mismo nombre que es lo que va 
 a ir adento de $_POST[''] en el archivo de modelo de edicion */
-var ob = {idProducto:idProducto,nombreProducto:nombreProducto,idTipoProducto:idTipoProducto,idUnidadMedida:idUnidadMedida,fechaIngresoProducto:fechaIngresoProducto,fechaVencimientoProducto:fechaVencimientoProducto,estadoProducto:estadoProducto,idSucursal:idSucursal,costoProducto:costoProducto,stockProducto:stockProducto, imagenModificar:imagenModificar, campoimg:campoimg};
+var ob = {idProducto:idProducto,nombreProducto:nombreProducto,idTipoProducto:idTipoProducto,idUnidadMedida:idUnidadMedida,fechaIngresoProducto:fechaIngresoProducto,fechaVencimientoProducto:fechaVencimientoProducto,estadoProducto:estadoProducto,idSucursal:idSucursal,costoProducto:costoProducto,stockProducto:stockProducto};
  $.ajax({
             //forma en la que se enviaran los datos 
                 type: "POST",
@@ -221,7 +190,6 @@ var ob = {idProducto:idProducto,nombreProducto:nombreProducto,idTipoProducto:idT
                 },
                 success: function(data)
                 { 
-                   modificarImagen();
                  
                   $("#panel_respuesta_edicion").html(data);
                  //listar_dato();
@@ -328,56 +296,4 @@ var ob = {idProducto:idProducto,img4:img4};
 
 
 }
-
-
-function btn_trasladar(idProducto){
-    //el arreglo que se mandara en el metodo ajax solo llevara el codigo que es codVehiculo 
-   
-   var ob = {idProducto:idProducto};
-
-  alert(idProducto);
-   //metodo ajax que se encarga de enviar los datos o recibirlos jajaja
- $.ajax({
-                //forma en la que se enviaran los datos POST
-                type: "POST",
-                //url del archivo donde se creo la vista para eitcion de registros
-                url:"../vista/trasladar.php",
-                data: ob,
-                //los eventos que ocurriran antes durante y despues del oncick
-                beforeSend: function(objeto){
-                
-                },
-                success: function(data)
-                { 
-                 //se llena el panel editar del div con id de nombre panel_editar
-                 $("#panel_trasladar").html(data);
-                
-                }
-             });
-}
-
-
-
-function modificarImagen(){
-    
-        var formData = new FormData();
-        var files = $('#imagenModificar')[0].files[0];
-        formData.append('file',files);
-        $.ajax({
-            url: '../modelo/upImagen.php',
-            type: 'post',
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: function(response) {
-                if (response != 0) {
-                    $(".card-img-top").attr("src", response);
-                } else {
-                    alert('Formato de imagen incorrecto.');
-                }
-            }
-        });
-        return false;
-
-    }
 

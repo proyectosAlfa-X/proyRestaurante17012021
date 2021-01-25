@@ -75,7 +75,7 @@
   border-radius: 24px;
   font-weight: bolder;
 }
-.efectos:hover,.efectOs:active,.efectos button:focus {
+.efectos:hover,.efectis:active,.efectos button:focus {
   background: #8E44AD;
   border-radius: 24px;
 }
@@ -132,7 +132,7 @@ width: 100%;
   color: #EF3B3A;
 }
 body {
-  background: #ff6600; /* fallback for old browsers */    
+  background: #FFA07A; /* fallback for old browsers */    
   margin-top: -88px;
 
 }

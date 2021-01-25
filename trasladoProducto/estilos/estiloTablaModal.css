@@ -1,0 +1,103 @@
+ /* tabla responsiva*/
+    .containerModal {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.tableModal {
+    width: 100%;
+    border: 1px solid #084D6E;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+
+.tableModal caption {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+    color:#084D6E;
+}
+
+.tableModal tr {
+    background-color: #f8f8f8;
+    border: 1px solid #084D6E;
+}
+
+.tableModal th, .tableModal td {
+    font-size: 12px;/* tamanio de letra en la tabla*/
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #084D6E;
+}
+
+.tableModal thead th{ 
+    text-transform: uppercase;
+    background-color:#4682b4;
+    border: 1px solid #084D6E;
+}
+.tBotonModal{
+        font-size:11px;
+         text-align:center;
+       /* font-family:Verdana,Helvetica;
+        font-weight:bold;
+        color:white;
+        background:#638cb5;
+        border:0px;*/
+       width:65px;
+        height:20px;
+       }
+/*.table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 3px solid #000;
+}
+
+.table tbody td:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+*/
+/*dimenciones donde se hace responsive la tabla 1000*/ 
+@media screen and (max-width: 1010px) {
+    .tableModal {
+        border: 0px;
+    }
+    .tableModal caption {
+        font-size: 22px;
+    }
+    .tableModal thead {
+        display: none;
+    }
+    .tableModal tr {
+        margin-bottom: 8px;
+        border-bottom: 1px solid #4682b4;
+        
+        display: block;
+    }
+    .tableModal th, .table td {
+        font-size: 12px;
+    }
+    .tableModal td {
+        display: block;
+        border-bottom: 1px solid #4682b4;
+        text-align: right;
+    }
+    .tableModal  td:last-child {
+        border-bottom: 0px;
+    }
+    .tableModal td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+}
+
+    /*termina tabla responsiva*/
+
+#modalTamanio{
+width: 95% !important;
+
+}

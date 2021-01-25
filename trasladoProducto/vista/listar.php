@@ -27,7 +27,7 @@ $listaProductos=$crud->mostrar();
             <th  style="color: white;font-size: 15px;text-align: center" colspan="2" data-label="Acciones">Sucursal</th>
             <th  style="color: white;font-size: 15px;text-align: center" colspan="2" data-label="Acciones">Costo</th>
             <th  style="color: white;font-size: 15px;text-align: center" colspan="2" data-label="Acciones">Existencia</th>
-            <th  style="color: white;font-size: 15px;text-align: center" colspan="4" data-label="Acciones">Acciones</th>
+            <th  style="color: white;font-size: 15px;text-align: center" colspan="3" data-label="Acciones">Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -44,12 +44,10 @@ $listaProductos=$crud->mostrar();
             <td data-label="Sucursal"colspan="2"><?php echo $producto->getIdSucursal()?> </td>
             <td data-label="Costo"colspan="2"><?php echo $producto->getCostoProducto() ?> </td>
             <td data-label="Existencia"colspan="2"><?php echo $producto->getStockProducto()?></td>
-           <td data-label="Opciones" colspan="4">
+           <td data-label="Opciones" colspan="3">
                  	<button class="btn btn-info btn-xs tboton" data-toggle="modal" data-target="#myModal" onclick="btn_editar('<?php echo $idProducto=$producto->getIdProducto()?>');"> <span class="glyphicon glyphicon-edit">Modificar </span></button>
             
                          	<button class="btn btn-danger btn-xs tboton"  data-toggle="modal" data-target="#myModalEliminar" onclick="btn_eliminar('<?php echo $idProducto=$producto->getIdProducto()?>');" ><span class="glyphicon glyphicon-remove">Eliminar</span></button>
-
-                          <button class="btn btn-primary btn-xs tboton"  data-toggle="modal" data-target="#myModalTraslado" onclick="btn_trasladar('<?php echo $idProducto=$producto->getIdProducto()?>');" ><span class="glyphicon glyphicon-remove">Trasladar</span></button>
             </td>
         </tr>
         <?php     }?>
@@ -119,41 +117,6 @@ $listaProductos=$crud->mostrar();
       <div class="modal-footer" style="background: #F8781D;">
 
           <button type="button" class="btn btn-primary btn-sm" onclick="btn_guardar_eliminar();">CONFIRMAR <i class="fa fa-save"></i></button>
-          <button type="button" class="btn btn-success btn-sm">MODIFICAR <i class="fa fa-pencil-square-o"></i></button>
-            <button type="button" class="btn btn-warning btn-sm">BUSCAR <i class="fa fa-search"></i></button>
-           <button type="button" class="btn btn-danger btn-sm">ELIMINAR <i class="fa fa-trash"></i></button>
-        <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Close</button>
-      </div>
-    
-
-  </div>
-</div>
-</div>
-</div>
-
-<!-- Modal -->
-<div id="myModalTraslado" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg tmodal">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header" style="background: #AF7AC5;">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-<script type ="text/javascript" src="../controlador/producto.js"></script>
-        <!--aqui formulario bootstrap de actualizacion-->
-        <div id="panel_trasladar"></div>
-        <div id="panel_respuesta_traslado"></div>
-       
-            
-           
-    
-      </div>
-      <div class="modal-footer" style="background: #F8781D;">
-
-        <button type="button" class="btn btn-primary btn-sm" onclick="btn_guardar_edicion();">GUARDAR <i class="fa fa-save"></i></button>
           <button type="button" class="btn btn-success btn-sm">MODIFICAR <i class="fa fa-pencil-square-o"></i></button>
             <button type="button" class="btn btn-warning btn-sm">BUSCAR <i class="fa fa-search"></i></button>
            <button type="button" class="btn btn-danger btn-sm">ELIMINAR <i class="fa fa-trash"></i></button>
