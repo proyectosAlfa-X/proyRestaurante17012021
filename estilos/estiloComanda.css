@@ -1,0 +1,157 @@
+  .btns1{
+    background:orange;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    height: 20px;
+    width: 80px;
+    border-color: orange;
+    
+ }
+ .btns1:hover{
+    background-color: #af7ac5;
+    font-weight: bold;
+    color: #fff;
+    border-color: #af7ac5;
+    border-radius: 12px;
+    height: 20px;
+    width: 80px;
+
+ }
+ 
+ .pWhite{
+    color: white;
+    font-size: 12px;
+    
+    margin-top: relative;
+    margin-bottom: relative;
+ }
+ .divC{
+    border-radius: 12px;
+    border-color: black;
+    background-color: gray;
+ }
+ /*encabezado tabla*/
+    .tabla-header{
+        background-color: #4682b4;
+       
+    }
+    /*color borde tabla*/
+  /*  .tabla-borde{
+        border-color: #4682b4;
+    }*/
+    .tablaFondo{
+         background-color: #e2f0fb;
+    }
+    /*color hover tabla*/
+     .table-hover tbody tr:hover {
+      background-color: rgba(122, 114, 81, 0.7);
+  }
+    .texto-blanco{
+        color: white;
+    }
+    .texto-amarillo{
+        color: yellow;
+    }
+     .texto-gris{
+        color:gray;
+    }
+     .texto-rojo{
+        color: red;
+    }
+    .texto-negro{
+        color: black;
+    }
+    .texto-azul{
+        color: #000080;
+    }
+    .btn-black{
+        background-color: #000;
+    }
+    /* tabla responsiva*/
+    .container {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.table {
+    width: 98%;
+    border: 1px solid #084D6E;
+    border-collapse: collapse;
+    margin-left:auto; 
+    margin-right:auto;
+     
+
+    padding: 0;
+    table-layout: fixed;
+}
+
+.table caption {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+    color:#084D6E;
+}
+
+.table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #084D6E;
+
+
+}
+
+.table th, .table td {
+    font-size: 11px;/* tamanio de letra en la tabla*/
+    padding: 8px;
+    text-align: center;
+     border: 1px solid #084D6E;
+}
+
+
+.table thead th{ 
+    text-transform: uppercase;
+    background-color:#4682b4;
+    border: 1px solid #084D6E;
+     font-size: 11px;
+
+
+}
+/*dimenciones donde se hace responsive la tabla 1000*/ 
+@media screen and (max-width: 1010px) {
+    .table {
+        border: 0px;
+    }
+    .table caption {
+        font-size: 22px;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 8px;
+        border-bottom: 1px solid #4682b4;
+        display: block;
+    }
+    .table th, .table td {
+        font-size: 12px;
+    }
+    .table td {
+        display: block;
+        border-bottom: 1px solid #4682b4;
+        text-align: right;
+    }
+    .table  td:last-child {
+        border-bottom: 0px;
+    }
+    .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+        /*color: black;*/
+    }
+
+}
+/*termina tabla responsiva*/
